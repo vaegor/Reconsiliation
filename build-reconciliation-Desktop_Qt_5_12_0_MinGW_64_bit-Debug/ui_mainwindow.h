@@ -10,11 +10,10 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -27,8 +26,8 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QLabel *label;
+    QLabel *logo_pix;
     QMenuBar *menuBar;
-    QMenu *menuVaegor;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -37,18 +36,45 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1128, 575);
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        MainWindow->setPalette(palette);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("logo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/assets/logo.png"), QSize(), QIcon::Normal, QIcon::On);
+        MainWindow->setWindowIcon(icon);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(10, 10, 1111, 21));
+        label->setGeometry(QRect(10, 0, 1111, 71));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Tw Cen MT"));
+        font.setPointSize(50);
+        label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
+        logo_pix = new QLabel(centralWidget);
+        logo_pix->setObjectName(QString::fromUtf8("logo_pix"));
+        logo_pix->setGeometry(QRect(960, 10, 151, 101));
+        logo_pix->setPixmap(QPixmap(QString::fromUtf8("logo.png")));
+        logo_pix->setScaledContents(true);
+        logo_pix->setAlignment(Qt::AlignCenter);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1128, 21));
-        menuVaegor = new QMenu(menuBar);
-        menuVaegor->setObjectName(QString::fromUtf8("menuVaegor"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -57,8 +83,6 @@ public:
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
-        menuBar->addAction(menuVaegor->menuAction());
-
         retranslateUi(MainWindow);
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -66,9 +90,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Reconciliation", nullptr));
         label->setText(QApplication::translate("MainWindow", "Reconciliation", nullptr));
-        menuVaegor->setTitle(QApplication::translate("MainWindow", "Vaegor", nullptr));
+        logo_pix->setText(QApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/assets/logo.png\"/></p></body></html>", nullptr));
     } // retranslateUi
 
 };

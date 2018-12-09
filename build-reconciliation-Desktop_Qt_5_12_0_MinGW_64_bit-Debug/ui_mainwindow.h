@@ -62,7 +62,7 @@ public:
         label->setGeometry(QRect(10, 0, 1111, 71));
         QFont font;
         font.setFamily(QString::fromUtf8("Tw Cen MT"));
-        font.setPointSize(50);
+        font.setPointSize(30);
         label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
         logo_pix = new QLabel(centralWidget);

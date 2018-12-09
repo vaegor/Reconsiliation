@@ -101,7 +101,7 @@
     <property name="font">
      <font>
       <family>Tw Cen MT</family>
-      <pointsize>50</pointsize>
+      <pointsize>30</pointsize>
      </font>
     </property>
     <property name="text">

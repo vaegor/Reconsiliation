@@ -21,10 +21,12 @@ public:
     int bankID;
 public:
     conc();
+    int getConcID();
     void setAll(ifstream &file, int i);
     void print();
     date getDate();
     int getReciptID();
+    string getDateS();
     string getTime();
     string getName();
     string getCode();

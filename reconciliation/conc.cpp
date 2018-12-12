@@ -1,5 +1,8 @@
 #include "conc.h"
 #include <fstream>
+#include <iomanip>
+#include <QDebug>
+
 
 conc::conc() : reciptDate()
 {
@@ -14,6 +17,16 @@ conc::conc() : reciptDate()
     bankID = 0;
 }
 
+string conc::getDateS()
+{
+    string s = std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day);
+    return s;
+}
+
+int conc::getConcID()
+{
+    return  consID;
+}
 void conc::setAll(ifstream &file, int i)
 {
     string data = "";
@@ -55,20 +68,12 @@ void conc::setAll(ifstream &file, int i)
     getline(file, data, '\n');
     user = data;
 
+    qDebug() << "ok";
+
     consID = i + 1;
 
 }
-/*
-    date reciptDate;
-    int reciptID;
-    string time;
-    string name;
-    string code;
-    string company;
-    string policy;
-    double price;
-    string user;
-    int consID;*/
+
 void conc::exportData(ofstream &newFile)
 {
     newFile << reciptID << '\t' << month << "/" << day << "/" << year << ' ' << time << '\t' << name << '\t' << code << '\t'<< company << '\t' << policy << '\t' <<  price << '\t' << user << '\t' << consID << '\t' << bankID << '\n';
@@ -76,7 +81,7 @@ void conc::exportData(ofstream &newFile)
 
 bool conc::priceDate(bank & myBank, int r)
 {
-    if (price == 0.0 || price == 0.01)
+    if (price == 0 || price == 0.01)
     {
         consID = -1;
         bankID = -1;
@@ -102,8 +107,7 @@ bool conc::priceDate(bank & myBank, int r)
         return false;
     }
 }
-//========================================================
-//GetFunctions
+
 date conc::getDate()
 {
     return reciptDate;
@@ -154,12 +158,6 @@ int conc::getConsID()
     return consID;
 }
 
-//================================================
-//End of Get Functions
-bool conc::allowableTime(bank & thisBank)
-{
-    return false;
-}
 
 conc::~conc()
 {

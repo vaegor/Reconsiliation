@@ -234,8 +234,11 @@ Makefile: ../reconciliation/reconciliation.pro C:/Qt/5.12.0/mingw73_64/mkspecs/w
 		C:/Qt/5.12.0/mingw73_64/mkspecs/features/yacc.prf \
 		C:/Qt/5.12.0/mingw73_64/mkspecs/features/lex.prf \
 		../reconciliation/reconciliation.pro \
+		C:/Qt/5.12.0/mingw73_64/lib/Qt5Multimedia.prl \
 		C:/Qt/5.12.0/mingw73_64/lib/Qt5Widgets.prl \
 		C:/Qt/5.12.0/mingw73_64/lib/Qt5Gui.prl \
+		C:/Qt/5.12.0/mingw73_64/lib/Qt5Sql.prl \
+		C:/Qt/5.12.0/mingw73_64/lib/Qt5Network.prl \
 		C:/Qt/5.12.0/mingw73_64/lib/Qt5Core.prl \
 		C:/Qt/5.12.0/mingw73_64/lib/qtmaind.prl
 	$(QMAKE) -o Makefile ..\reconciliation\reconciliation.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -412,8 +415,11 @@ C:/Qt/5.12.0/mingw73_64/mkspecs/features/exceptions.prf:
 C:/Qt/5.12.0/mingw73_64/mkspecs/features/yacc.prf:
 C:/Qt/5.12.0/mingw73_64/mkspecs/features/lex.prf:
 ../reconciliation/reconciliation.pro:
+C:/Qt/5.12.0/mingw73_64/lib/Qt5Multimedia.prl:
 C:/Qt/5.12.0/mingw73_64/lib/Qt5Widgets.prl:
 C:/Qt/5.12.0/mingw73_64/lib/Qt5Gui.prl:
+C:/Qt/5.12.0/mingw73_64/lib/Qt5Sql.prl:
+C:/Qt/5.12.0/mingw73_64/lib/Qt5Network.prl:
 C:/Qt/5.12.0/mingw73_64/lib/Qt5Core.prl:
 C:/Qt/5.12.0/mingw73_64/lib/qtmaind.prl:
 qmake: FORCE

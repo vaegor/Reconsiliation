@@ -27,6 +27,14 @@ private slots:
 
     void on_conc_btn_clicked();
 
+    void on_delete_btn_clicked();
+
+    void on_concBtn_clicked();
+
+    void on_progressBar_valueChanged(int value);
+
+    void on_error_btn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase reconciliationDb;

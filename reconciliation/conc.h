@@ -33,6 +33,7 @@ public:
     string getCompany();
     string getPolicy();
     double getPrice();
+    int getBankID();
     string getUser();
     int getConsID();
     bool allowableTime(bank & thisBank);

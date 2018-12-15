@@ -25,17 +25,22 @@ public:
     {
 
         string line;
+        lines = 0;
         ifstream myfile;
         myfile.open(fileName);
+        if (myfile.fail())
+            qDebug() << "file did not open";
+        else {
         //Obtain Number of Records
         while (getline(myfile, line))
         {
-            ++lines;
-        }
+            lines++;
+        };
         //lines  - Number of lines(records)
         myfile.close();
         record = new type[lines];
         readData(fileName);
+        }
     }
     //Function will read data from file to each object in the vector. It will call the setAll function from corresponding class.
     void readData(const string fileName)
@@ -44,19 +49,18 @@ public:
         file.open(fileName);
 
         if(!file.fail())
-           { qDebug() << "ok";}
+           { qDebug() << "ok--";}
         else {
             qDebug() << ":(";
         }
 
         for (int i = 0; i < lines; i++)
         {
+
             record[i].setAll(file, i);
-            qDebug() << "ok" << i ;
         }
         file.close();
-
-    }
+   }
 
     //Prints data from all objects in vector.
     void printAll()

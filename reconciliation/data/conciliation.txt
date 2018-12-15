@@ -1687,7 +1687,7 @@
 2729	11/26/2018 01:16PM	Modesta Bacilio Martinez	3.1 - Service Fee	Malinalli Taxes & Insurance Services	MIL4121456	10.13	ALV
 2730	11/26/2018 01:27PM	Jesus Carvajal	1.1 - Agency Sweep	Alliance United Insurance	MIL4080938	176.78	VBV
 2730	11/26/2018 01:27PM	Jesus Carvajal	3.1 - Service Fee	Malinalli Taxes & Insurance Services	MIL4080938	10.22	VBV
-2731	11/26/2018 01:51PM	Jose Osorio Delgado	1.1 - Agency Sweep	Builders & Tradesmen's Insurance Servic	QAA04972325	VOID	VBV
+2731	11/26/2018 01:51PM	Jose Osorio Delgado	1.1 - Agency Sweep	Builders & Tradesmen's Insurance Servic	QAA04972325	0	VBV
 2732	11/26/2018 01:51PM	Leonel Martinezjuarez	1.1 - Agency Sweep	Alliance United Insurance	MIL3790561	133.46	BNV
 2732	11/26/2018 01:51PM	Leonel Martinezjuarez	3.1 - Service Fee	Malinalli Taxes & Insurance Services	MIL3790561	10.54	BNV
 2733	11/26/2018 01:50PM	Jose Chamalecotzojay	1.1 - Agency Sweep	Alliance United Insurance	MIL3750817	103.45	ALV

@@ -36,6 +36,7 @@ void conc::setAll(ifstream &file, int i)
     getline(file, data, '\t');
     reciptID = stoi(data);
 
+
     getline(file, data, '/');
     mdate = stoi(data);
     setMonth(mdate);
@@ -67,10 +68,7 @@ void conc::setAll(ifstream &file, int i)
     }
     getline(file, data, '\n');
     user = data;
-
-    qDebug() << "ok";
-
-    consID = i + 1;
+    consID = i+1;
 
 }
 
@@ -81,7 +79,8 @@ void conc::exportData(ofstream &newFile)
 
 bool conc::priceDate(bank & myBank, int r)
 {
-    if (price == 0 || price == 0.01)
+
+    if (price == 0.0 || this->price == 0.01)
     {
         consID = -1;
         bankID = -1;
@@ -156,6 +155,10 @@ string conc::getUser()
 int conc::getConsID()
 {
     return consID;
+}
+int conc::getBankID()
+{
+    return bankID;
 }
 
 

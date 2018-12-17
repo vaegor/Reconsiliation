@@ -11,6 +11,7 @@
 #include <QPixmap>
 #include <QDebug>
 #include <string>
+#include <QPushButton>
 using std::string;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //====================================================================
 //Start Database ---------------------------------------
     reconciliationDb = QSqlDatabase::addDatabase("QSQLITE");
     reconciliationDb.setDatabaseName("C:/Users/calix/Documents/Programs/reconciliation/data/reconciliationDb");

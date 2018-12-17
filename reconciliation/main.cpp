@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     QTimer t;
 
     intro.show();
+
     QTimer::singleShot(1000,&intro,SLOT(close()));
     QTimer::singleShot(1000,&w,SLOT(show()));
 

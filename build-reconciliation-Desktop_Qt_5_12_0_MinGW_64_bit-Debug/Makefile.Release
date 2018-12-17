@@ -119,6 +119,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_asstes.cpp
 release/qrc_asstes.cpp: ../reconciliation/asstes/asstes.qrc \
 		C:/Qt/5.12.0/mingw73_64/bin/rcc.exe \
+		../reconciliation/asstes/buttonStyle.css \
 		../reconciliation/asstes/logo.png
 	C:\Qt\5.12.0\mingw73_64\bin\rcc.exe -name asstes ..\reconciliation\asstes\asstes.qrc -o release\qrc_asstes.cpp
 
@@ -396,7 +397,7 @@ release/moc_mainwindow.cpp: C:/Qt/5.12.0/mingw73_64/include/QtSql/QtSql \
 		../reconciliation/mainwindow.h \
 		release/moc_predefs.h \
 		C:/Qt/5.12.0/mingw73_64/bin/moc.exe
-	C:\Qt\5.12.0\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/calix/Documents/Programs/build-reconciliation-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.0/mingw73_64/mkspecs/win32-g++ -IC:/Users/calix/Documents/Programs/reconciliation -IC:/Qt/5.12.0/mingw73_64/include -IC:/Qt/5.12.0/mingw73_64/include/QtMultimedia -IC:/Qt/5.12.0/mingw73_64/include/QtWidgets -IC:/Qt/5.12.0/mingw73_64/include/QtGui -IC:/Qt/5.12.0/mingw73_64/include/QtANGLE -IC:/Qt/5.12.0/mingw73_64/include/QtSql -IC:/Qt/5.12.0/mingw73_64/include/QtNetwork -IC:/Qt/5.12.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\reconciliation\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.12.0\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/MTS-01/Documents/Reconciliation/build-reconciliation-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.0/mingw73_64/mkspecs/win32-g++ -IC:/Users/MTS-01/Documents/Reconciliation/reconciliation -IC:/Qt/5.12.0/mingw73_64/include -IC:/Qt/5.12.0/mingw73_64/include/QtMultimedia -IC:/Qt/5.12.0/mingw73_64/include/QtWidgets -IC:/Qt/5.12.0/mingw73_64/include/QtGui -IC:/Qt/5.12.0/mingw73_64/include/QtANGLE -IC:/Qt/5.12.0/mingw73_64/include/QtSql -IC:/Qt/5.12.0/mingw73_64/include/QtNetwork -IC:/Qt/5.12.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\reconciliation\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_viewconc.cpp: C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qdialog.h \
@@ -505,7 +506,7 @@ release/moc_viewconc.cpp: C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QDialog \
 		../reconciliation/viewconc.h \
 		release/moc_predefs.h \
 		C:/Qt/5.12.0/mingw73_64/bin/moc.exe
-	C:\Qt\5.12.0\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/calix/Documents/Programs/build-reconciliation-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.0/mingw73_64/mkspecs/win32-g++ -IC:/Users/calix/Documents/Programs/reconciliation -IC:/Qt/5.12.0/mingw73_64/include -IC:/Qt/5.12.0/mingw73_64/include/QtMultimedia -IC:/Qt/5.12.0/mingw73_64/include/QtWidgets -IC:/Qt/5.12.0/mingw73_64/include/QtGui -IC:/Qt/5.12.0/mingw73_64/include/QtANGLE -IC:/Qt/5.12.0/mingw73_64/include/QtSql -IC:/Qt/5.12.0/mingw73_64/include/QtNetwork -IC:/Qt/5.12.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\reconciliation\viewconc.h -o release\moc_viewconc.cpp
+	C:\Qt\5.12.0\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/MTS-01/Documents/Reconciliation/build-reconciliation-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.0/mingw73_64/mkspecs/win32-g++ -IC:/Users/MTS-01/Documents/Reconciliation/reconciliation -IC:/Qt/5.12.0/mingw73_64/include -IC:/Qt/5.12.0/mingw73_64/include/QtMultimedia -IC:/Qt/5.12.0/mingw73_64/include/QtWidgets -IC:/Qt/5.12.0/mingw73_64/include/QtGui -IC:/Qt/5.12.0/mingw73_64/include/QtANGLE -IC:/Qt/5.12.0/mingw73_64/include/QtSql -IC:/Qt/5.12.0/mingw73_64/include/QtNetwork -IC:/Qt/5.12.0/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\reconciliation\viewconc.h -o release\moc_viewconc.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -810,7 +811,27 @@ release/main.o: ../reconciliation/main.cpp ../reconciliation/mainwindow.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtGui/qimagereader.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtGui/qimageiohandler.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qlabel.h
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.0/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.0/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.0/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtGui/QFontDatabase \
+		C:/Qt/5.12.0/mingw73_64/include/QtGui/qfontdatabase.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\reconciliation\main.cpp
 
 release/mainwindow.o: ../reconciliation/mainwindow.cpp ../reconciliation/mainwindow.h \
@@ -1084,25 +1105,25 @@ release/mainwindow.o: ../reconciliation/mainwindow.cpp ../reconciliation/mainwin
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QGridLayout \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qlayout.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QHeaderView \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qheaderview.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QLabel \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QProgressBar \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qprogressbar.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QPushButton \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QSpacerItem \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QTabWidget \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QTableView \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qtableview.h \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QToolBar \
-		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/qtoolbar.h \
+		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QWidget \
 		../reconciliation/viewconc.h \
 		C:/Qt/5.12.0/mingw73_64/include/QtWidgets/QDialog \

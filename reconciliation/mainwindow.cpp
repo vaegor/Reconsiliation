@@ -12,6 +12,7 @@
 #include <QDebug>
 #include <string>
 #include <QPushButton>
+
 using std::string;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -22,7 +23,8 @@ MainWindow::MainWindow(QWidget *parent) :
     //====================================================================
 //Start Database ---------------------------------------
     reconciliationDb = QSqlDatabase::addDatabase("QSQLITE");
-    reconciliationDb.setDatabaseName("C:/Users/calix/Documents/Programs/reconciliation/data/reconciliationDb");
+    //reconciliationDb.setDatabaseName("C:/Users/calix/Documents/Programs/reconciliation/data/reconciliationDb");
+    reconciliationDb.setDatabaseName("C:/Users/MTS-01/Documents/Reconciliation/reconciliation/data/reconciliationDb");
     if(!reconciliationDb.open())
         ui->connect_lbl->setText("fail");
     else {
@@ -37,6 +39,7 @@ MainWindow::MainWindow(QWidget *parent) :
     modal->setQuery(*qry);
     ui->tableView->setModel(modal);
 //---------------------------------------------------------------
+
 }
 
 MainWindow::~MainWindow()
@@ -47,7 +50,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_importData_clicked()
 {
     //Upload New Data to vector.
-    vector<conc> * conciliationV = new vector<conc>("C:/Users/calix/Documents/Programs/reconciliation/data/conciliation.txt");
+    vector<conc> * conciliationV = new vector<conc>("C:/Users/MTS-01/Documents/Reconciliation/reconciliation/data/conciliation.txt");
 
     //Insert data from vector into database.
     int rows = 0;
@@ -129,8 +132,8 @@ void MainWindow::on_delete_btn_clicked()
 
 void MainWindow::on_concBtn_clicked()
 {
-    vector<conc> * conciliationV = new vector<conc>("C:/Users/calix/Documents/Programs/reconciliation/data/conciliation.txt");
-    vector<bank>  bankV("C:/Users/calix/Documents/Programs/reconciliation/data/bank.txt");
+    vector<conc> * conciliationV = new vector<conc>("C:/Users/MTS-01/Documents/Reconciliation/reconciliation/data/conciliation.txt");
+    vector<bank>  bankV("C:/Users/MTS-01/Documents/Reconciliation/reconciliation/data/bank.txt");
     conciliationV->concilidiate(bankV);
     ui->progressBar->valueChanged(01);
     int r = conciliationV->getLines();

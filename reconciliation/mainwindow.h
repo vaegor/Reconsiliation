@@ -35,6 +35,7 @@ private slots:
 
     void on_error_btn_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase reconciliationDb;
